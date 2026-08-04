@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Account - Itqan - Qudrat & Tahsili</title>
+<style>
+  :root {
+    --primary: #1a56db;
+    --primary-light: #e8effd;
+    --text: #1f2937;
+    --text-secondary: #6b7280;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --footer-bg: #1e293b;
+    --footer-text: #cbd5e1;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.05);
+    --radius: 12px;
+    --max-width: 900px;
+    --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #3b82f6;
+      --primary-light: #1e3a5f;
+      --text: #e2e8f0;
+      --text-secondary: #94a3b8;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --footer-bg: #020617;
+      --footer-text: #94a3b8;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.4), 0 4px 10px rgba(0,0,0,0.3);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 1rem 1.5rem;
+  }
+  header .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  header .app-name {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.3rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  main { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1.5rem; }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    padding: 0.75rem 1rem;
+    background: var(--primary-light);
+    border-radius: var(--radius);
+  }
+  .meta strong { color: var(--text); }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: var(--shadow-lg); }
+
+  .card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-light);
+  }
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0.4rem;
+    color: var(--text);
+  }
+  .card p { margin-bottom: 0.75rem; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul, .card ol { margin: 0.5rem 0 0.75rem 1.5rem; }
+  .card li { margin-bottom: 0.3rem; }
+  .card a { color: var(--primary); text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+
+  .card.highlight {
+    border-left: 4px solid var(--primary);
+    background: var(--primary-light);
+  }
+
+  footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  footer strong { color: #f1f5f9; }
+
+  @media (max-width: 600px) {
+    header { padding: 0.75rem 1rem; }
+    header h1 { font-size: 1.05rem; }
+    main { padding: 1.25rem 1rem; }
+    .card { padding: 1.25rem; }
+    .meta { flex-direction: column; gap: 0.25rem; }
+  }
+
+  @media print {
+    header { position: static; box-shadow: none; }
+    .card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+    .card:hover { box-shadow: none; }
+    footer { background: #f5f5f5; color: #333; }
+    body { background: #fff; color: #000; }
+    .meta { background: #f0f0f0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>Delete Your Account</h1>
+    <span class="app-name">Itqan - Qudrat &amp; Tahsili</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="meta">
+    <span><strong>Last Updated:</strong> August 4, 2026</span>
+    <span><strong>App:</strong> Itqan - Qudrat &amp; Tahsili</span>
+    <span><strong>Company:</strong> Koprey</span>
+    <span><strong>Country:</strong> the Kingdom of Saudi Arabia</span>
+  </div>
+
+  <section class="card">
+    <h2>1. Overview</h2>
+    <p>
+      Users of Itqan - Qudrat &amp; Tahsili (the &quot;App&quot;) may request the deletion of
+      their account and associated personal data at any time. This page explains how
+      to request account deletion, what data is deleted, and what data, if any, may be
+      retained and for how long.
+    </p>
+    <p>
+      Your request is processed by Koprey (the App's developer) within a reasonable
+      period after we verify that the request was made by the account holder.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>2. Option 1 &mdash; Delete Through the App (Recommended)</h2>
+    <p>
+      Open the App and navigate to:
+    </p>
+    <ol>
+      <li><strong>Profile</strong></li>
+      <li><strong>Settings</strong></li>
+      <li><strong>Delete Account</strong></li>
+    </ol>
+    <p>
+      You will be asked to confirm the deletion by entering your security code
+      (a 4-digit code set in your account). Once confirmed, your account and
+      associated data are deleted immediately.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>3. Option 2 &mdash; Request by Email</h2>
+    <p>
+      If you cannot access your account (for example, because you forgot your
+      password or no longer have access to the device), email us at:
+    </p>
+    <p>
+      <strong>
+        <a href="mailto:koprey.app@gmail.com">koprey.app@gmail.com</a>
+      </strong>
+    </p>
+    <p>To help us verify your identity, please include:</p>
+    <ul>
+      <li>The email address associated with your account.</li>
+      <li>Your display name (if you remember it).</li>
+    </ul>
+    <p>
+      We will process your request within a reasonable period after we are able to
+      verify that you are the account holder. Deletion requests sent from an email
+      address that does not match the account cannot be processed.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>4. Data Deleted</h2>
+    <p>When your request is processed, we will delete:</p>
+    <ul>
+      <li><strong>Your account</strong> &mdash; including your login credentials and authentication records.</li>
+      <li><strong>Your profile information</strong> &mdash; including your display name and related profile metadata.</li>
+      <li><strong>Your submitted questions</strong> and other user-generated content associated with your account (unless required to be retained by law).</li>
+      <li><strong>Your quiz attempts, answers, favorites, and reports</strong> &mdash; all activity records tied to your account.</li>
+      <li><strong>Uploaded question images</strong> &mdash; images you uploaded are removed when the associated questions are deleted.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>5. Data That May Be Retained</h2>
+    <p>We may retain limited information if required:</p>
+    <ul>
+      <li>To comply with legal obligations.</li>
+      <li>To resolve disputes.</li>
+      <li>To enforce our Terms of Service.</li>
+      <li>To investigate, detect, or respond to fraud, abuse, or security incidents.</li>
+    </ul>
+    <p>
+      Any retained data will be kept only for the period required by applicable law.
+      After that period, it is deleted or irreversibly anonymized.
+    </p>
+    <p>
+      In addition, limited backups of our database may be retained for a short
+      period for disaster-recovery purposes before being automatically deleted.
+      Some anonymized or aggregated data (e.g., statistical counts) that can no
+      longer be linked back to you may be retained for analytical purposes.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>6. What Happens After Deletion</h2>
+    <ul>
+      <li>Your account will no longer be able to sign in.</li>
+      <li>Your profile and user-generated content will no longer be visible in the App.</li>
+      <li>Deletion is permanent and cannot be undone. You will not be able to recover your account or its data by signing in again.</li>
+    </ul>
+  </section>
+
+  <section class="card highlight">
+    <h2>7. Contact</h2>
+    <p>If you have any questions about account deletion or need assistance, contact us:</p>
+    <p>
+      <strong>Email (Account &amp; Data Requests):</strong>
+      <a href="mailto:koprey.app@gmail.com">koprey.app@gmail.com</a>
+    </p>
+    <p>
+      <strong>Company:</strong> Koprey
+    </p>
+    <p>
+      <strong>Country:</strong> the Kingdom of Saudi Arabia
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 <strong>Koprey</strong>. All rights reserved.</p>
+  <p>Itqan - Qudrat &amp; Tahsili</p>
+</footer>
+
+</body>
+</html>
